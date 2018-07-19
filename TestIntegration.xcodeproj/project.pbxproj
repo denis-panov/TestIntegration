@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E7D13EF37AFF5A74EF78517 /* Pods_TestIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D123D457A109D291939BBD6 /* Pods_TestIntegration.framework */; };
 		C321741B20FDD699004F8CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321741A20FDD699004F8CE3 /* AppDelegate.swift */; };
 		C321741D20FDD699004F8CE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321741C20FDD699004F8CE3 /* ViewController.swift */; };
 		C321742020FDD699004F8CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C321741E20FDD699004F8CE3 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5723FCA99A8F071A97CA3D57 /* Pods-TestIntegration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestIntegration.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestIntegration/Pods-TestIntegration.release.xcconfig"; sourceTree = "<group>"; };
+		7D123D457A109D291939BBD6 /* Pods_TestIntegration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestIntegration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C321741720FDD699004F8CE3 /* TestIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C321741A20FDD699004F8CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C321741C20FDD699004F8CE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,8 @@
 		C321742120FDD6A6004F8CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C321742420FDD6A6004F8CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C321742620FDD6A6004F8CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39E988F20FF6D31006B3B11 /* TestIntegration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestIntegration.entitlements; sourceTree = "<group>"; };
+		F01DB39493F0873EC3B3CF02 /* Pods-TestIntegration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestIntegration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestIntegration/Pods-TestIntegration.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7D13EF37AFF5A74EF78517 /* Pods_TestIntegration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		871723F584C5D1DB14E11D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D123D457A109D291939BBD6 /* Pods_TestIntegration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C321740E20FDD699004F8CE3 = {
 			isa = PBXGroup;
 			children = (
 				C321741920FDD699004F8CE3 /* TestIntegration */,
 				C321741820FDD699004F8CE3 /* Products */,
+				FE1F8BD91AEE4A9D045A772F /* Pods */,
+				871723F584C5D1DB14E11D61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +70,7 @@
 		C321741920FDD699004F8CE3 /* TestIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				C39E988F20FF6D31006B3B11 /* TestIntegration.entitlements */,
 				C321741A20FDD699004F8CE3 /* AppDelegate.swift */,
 				C321741C20FDD699004F8CE3 /* ViewController.swift */,
 				C321741E20FDD699004F8CE3 /* Main.storyboard */,
@@ -64,6 +81,15 @@
 			path = TestIntegration;
 			sourceTree = "<group>";
 		};
+		FE1F8BD91AEE4A9D045A772F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F01DB39493F0873EC3B3CF02 /* Pods-TestIntegration.debug.xcconfig */,
+				5723FCA99A8F071A97CA3D57 /* Pods-TestIntegration.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +97,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C321742920FDD6A6004F8CE3 /* Build configuration list for PBXNativeTarget "TestIntegration" */;
 			buildPhases = (
+				14CBECF2B4826D1C12C04761 /* [CP] Check Pods Manifest.lock */,
 				C321741320FDD699004F8CE3 /* Sources */,
 				C321741420FDD699004F8CE3 /* Frameworks */,
 				C321741520FDD699004F8CE3 /* Resources */,
@@ -96,6 +123,14 @@
 				TargetAttributes = {
 					C321741620FDD699004F8CE3 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -129,6 +164,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14CBECF2B4826D1C12C04761 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestIntegration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C321741320FDD699004F8CE3 /* Sources */ = {
@@ -280,16 +336,19 @@
 		};
 		C321742A20FDD6A6004F8CE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F01DB39493F0873EC3B3CF02 /* Pods-TestIntegration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestIntegration/TestIntegration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2MWAYF9R4H;
+				DEVELOPMENT_TEAM = 285W24646W;
 				INFOPLIST_FILE = TestIntegration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depanov.TestIntegration;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depanov.testintegration2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,16 +357,19 @@
 		};
 		C321742B20FDD6A6004F8CE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5723FCA99A8F071A97CA3D57 /* Pods-TestIntegration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestIntegration/TestIntegration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2MWAYF9R4H;
+				DEVELOPMENT_TEAM = 285W24646W;
 				INFOPLIST_FILE = TestIntegration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depanov.TestIntegration;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depanov.testintegration2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

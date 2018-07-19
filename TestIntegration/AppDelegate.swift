@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
+import AppCenterPush
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MSPushDelegate {
 
     var window: UIWindow?
 
@@ -17,7 +22,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch
         print("Test XCode Beta")
+        MSAppCenter.setLogLevel(.verbose)
+        MSPush.setDelegate(self)
+        MSAppCenter.start("e4498815-85b9-41b2-824e-2410df58806f", withServices: [MSAnalytics.self, MSCrashes.self, MSPush.self])
         return true
+    }
+    
+    func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
+        let title: String = pushNotification.title ?? ""
+        var message: String = pushNotification.message ?? ""
+        var customData: String = ""
+        for item in pushNotification.customData {
+            customData =  ((customData.isEmpty) ? "" : "\(customData), ") + "\(item.key): \(item.value)"
+        }
+        if (UIApplication.shared.applicationState == .background) {
+            NSLog("Notification received in background, title: \"\(title)\", message: \"\(message)\", custom data: \"\(customData)\"");
+        } else {
+            message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
+            
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
+            
+            // Show the alert controller.
+            self.window?.rootViewController?.present(alertController, animated: true)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
